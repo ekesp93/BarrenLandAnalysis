@@ -5,10 +5,12 @@ import java.util.List;
 public class Utils {
 
     public static List<List<Integer>> convertInputToIntegerList(String input) {
+        // Separate the input string into a string for each rectangle
         String editedInput = input.substring(1, input.length() - 1);
         editedInput = editedInput.replace("\"", "");
         String[] arrayByRectangle = editedInput.split(",");
 
+        // Convert each rectangle into an Integer list and insert that into a larger list of rectangles
         List<List<Integer>> barrenLandCoordinateList = new ArrayList<List<Integer>>();
         for (String rectangle : arrayByRectangle) {
             List<Integer> integerList = new ArrayList<Integer>();
